@@ -1,5 +1,7 @@
-This project is meant to simulate an assembler. It takes in a file, written in a simplified assemble code and translates it to machine code. The language is based on RISC-V therefore each instruction is 24 bits. The instructions can either be a oeprand instruction, which has an opcode, an addressing mode and a stated operand, or a operate instruction which is only an opcode. Below is a table showing the opcode in the assembly language, what it does, how it is represented in machine code, and what adressing modes it supports.
+This project simulates an assembler, translating simplified assembly code into machine code
 
+
+It takes in a file, written in a simplified assemble code and translates it to machine code. The language is based on RISC-V architecture therefore each instruction is comprised of 24 bits. Instructions can either be oeprand instructions, with an opcode, addressing mode and specified operand, or operate instructions, containing only an opcode. Below is a comprehensive table detailing the assembly opcodes, their machine representations, supported addressing modes, and descriptions.
 |Assembly|Machine|Addressing Modes|Description|
 |---|:---:|:---:|---|
 |LDA operand|00|0 through 9|ACC = operand|
@@ -59,10 +61,10 @@ Below a table showing the addressing modes, what it does and how they are repres
 |Frame Indirect|inst *! XXX|7|Memory[Memory[XXX + FP]]|
 |Frame Indirect Indexed|inst &! XXX|9|Memory[Memory[XXX + FP] + XR]|
 
-What the opcode and adressing modes mean, do not really matter in the scope of this project. However, it does make more sense to know what they are representing. Operands are either constants, in base 10 or base 16 which is denoted with a `$` before the value, or labels. Labels are always lowerrcase, start with a letter, and are no more than eight characters. A labels value is the address of the word containing the instruction or data that immedietly follows the label's creation. 
+The opcode and adressing modes functionalities lie beyond the project's scope. However, knowing their representation does make it easier to understand the project. Operands consist of constants, either in base 10 or prefixed with `$` for base 16, or labels. Labels are always lowerrcase, start with a letter, and span no more than eight characters. A label's value is the address of the word containing the instruction or data following the label's creation. 
 
-The project takes in an infile and outfile as command line arguements. The infile is a "program" in this assembly language and the outfile is the "machine" code output. There are a bunch of testing files in the `test_files` folder which can be used for an infile, the relative path name must be specified.
+The program accepts infile and outfile names as command line arguements. The infile contains the the assembly code, while the outfile stores the corresponding machine code. A collection of test files in the `test_files` directory serve as potential infiles, the relative path name must be specified.
 
-To compile use  `g++ -std=c++14 main.cpp -o main`
+To compile, execute  `g++ -std=c++14 main.cpp -o main`
 
-To run use `./main infile outfile`
+To run, `./main infile outfile`
