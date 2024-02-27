@@ -67,4 +67,4 @@ The program accepts infile and outfile names as command line arguements. The inf
 
 To compile, execute  `g++ -std=c++14 main.cpp -o main`
 
-To run, `./main infile outfile`
+To run, use `./main infile outfile`
