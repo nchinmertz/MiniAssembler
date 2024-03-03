@@ -1,7 +1,7 @@
 This project simulates an assembler, translating simplified assembly code into machine code
 
 
-It takes in a file, written in a simplified assemble code and translates it to machine code. The language is based on RISC-V architecture therefore each instruction is comprised of 24 bits. Instructions can either be oeprand instructions, with an opcode, addressing mode and specified operand, or operate instructions, containing only an opcode. Below is a comprehensive table detailing the assembly opcodes, their machine representations, supported addressing modes, and descriptions.
+It takes in a file, written in a simplified assemble code and translates it to machine code. The language is a subset of the CUSP ISA. Each instruction is comprised of 24 bits. Instructions can either be oeprand instructions, with an opcode, addressing mode and specified operand, or operate instructions, containing only an opcode. Below is a comprehensive table detailing the assembly opcodes, their machine representations, supported addressing modes, and descriptions.
 |Assembly|Machine|Addressing Modes|Description|
 |---|:---:|:---:|---|
 |LDA operand|00|0 through 9|ACC = operand|
